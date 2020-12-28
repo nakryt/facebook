@@ -1,0 +1,36 @@
+@import "src/style/color";
+
+.header__center {
+  display: flex;
+  align-items: center;
+
+  .header__option {
+    align-items: center;
+    padding: 0 1.5rem;
+    cursor: pointer;
+    outline: none;
+
+    .MuiSvgIcon-root {
+      color: gray;
+    }
+
+    &:hover,
+    &:focus {
+      align-items: center;
+      background-color: $background-light;
+      border-radius: 1rem;
+      border-bottom: none;
+
+      .MuiSvgIcon-root {
+        color: $main;
+      }
+    }
+  }
+
+  .header__option--active {
+    border-bottom: 3px solid $main;
+    .MuiSvgIcon-root {
+      color: $main;
+    }
+  }
+}

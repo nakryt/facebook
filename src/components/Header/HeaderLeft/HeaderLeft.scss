@@ -1,0 +1,36 @@
+@import "src/style/color";
+
+.header__left {
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+
+  .facebook-icon {
+    width: 60px;
+    height: 60px;
+    margin-right: 1rem;
+
+    .facebook-svg-background {
+      fill: $main;
+    }
+    .facebook-svg-text {
+      fill: #fff;
+    }
+  }
+
+  .header__search {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    background-color: $background-light;
+
+    input {
+      border: none;
+      outline-width: 0;
+      padding: 0.3rem;
+      background-color: transparent;
+      font: inherit;
+    }
+  }
+}
