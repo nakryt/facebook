@@ -1,0 +1,27 @@
+@import "src/style/color";
+
+.sidebarRow {
+  display: flex;
+  align-items: center;
+  padding: 0.8rem;
+  cursor: pointer;
+
+  &:hover {
+    background-color: lightgray;
+    border-radius: 0.8rem;
+  }
+
+  h4 {
+    margin-left: 0.8rem;
+    font-weight: 600;
+  }
+
+  .MuiSvgIcon-root {
+    font-size: xx-large;
+    color: $main;
+  }
+
+  .MuiAvatar-fallback {
+    color: gray;
+  }
+}
