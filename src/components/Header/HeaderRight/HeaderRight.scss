@@ -1,8 +1,10 @@
-.header__right {
+@import "src/style/breakpoints";
+
+.headerRight {
   display: flex;
   align-items: center;
 
-  .header__info {
+  .headerRight__info {
     display: flex;
     align-items: center;
     margin-right: 2rem;
@@ -11,6 +13,15 @@
       margin-left: 0.5rem;
       width: 50px;
       font-size: 0.8rem;
+    }
+  }
+
+  .headerRight__options {
+    display: none;
+
+    @include for-desktop-large {
+      display: flex;
+      align-items: center;
     }
   }
 }

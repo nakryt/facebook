@@ -1,8 +1,24 @@
+@import "src/style/breakpoints";
+
 .feed {
   display: flex;
   flex: 1;
-  padding: 2rem 7rem;
+  padding: 2rem 2rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @include for-desktop-up {
+    padding: {
+      left: 4rem;
+      right: 4rem;
+    }
+  }
+
+  @include for-desktop-large {
+    padding: {
+      left: 7rem;
+      right: 7rem;
+    }
+  }
 }

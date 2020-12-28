@@ -1,8 +1,13 @@
 @import "src/style/color";
+@import "src/style/breakpoints";
 
 .header__center {
-  display: flex;
-  align-items: center;
+  display: none;
+
+  @include for-desktop-up {
+    display: flex;
+    align-items: center;
+  }
 
   .header__option {
     align-items: center;

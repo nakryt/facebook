@@ -11,24 +11,26 @@ import {
 
 export const HeaderRight = () => {
   return (
-    <div className="header__right">
-      <div className="header__info">
+    <div className="headerRight">
+      <div className="headerRight__info">
         <Avatar />
         <h4>Volodymyr Pestov</h4>
       </div>
 
-      <IconButton>
-        <AddIcon />
-      </IconButton>
-      <IconButton>
-        <ForumIcon />
-      </IconButton>
-      <IconButton>
-        <NotificationsActiveIcon />
-      </IconButton>
-      <IconButton>
-        <ExpandMoreIcon />
-      </IconButton>
+      <div className="headerRight__options">
+        <IconButton>
+          <AddIcon />
+        </IconButton>
+        <IconButton>
+          <ForumIcon />
+        </IconButton>
+        <IconButton>
+          <NotificationsActiveIcon />
+        </IconButton>
+        <IconButton>
+          <ExpandMoreIcon />
+        </IconButton>
+      </div>
     </div>
   );
 };

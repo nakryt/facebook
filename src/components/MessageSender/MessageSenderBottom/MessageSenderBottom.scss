@@ -1,0 +1,25 @@
+@import "src/style/color";
+
+.messageSenderBottom {
+  display: flex;
+  justify-content: space-evenly;
+
+  .messageSenderBottom__option {
+    display: flex;
+    align-items: center;
+    padding: 1.2rem;
+    margin: 0.3rem;
+    color: gray;
+    cursor: pointer;
+
+    &:hover {
+      border-radius: 1.5rem;
+      background-color: $background-main;
+    }
+
+    h4 {
+      margin-left: 0.8rem;
+      font-size: medium;
+    }
+  }
+}

@@ -1,4 +1,12 @@
+@import "src/style/breakpoints";
+
 .sidebar {
-  flex: 0.33;
-  padding: 2rem 0.8rem;
+  display: none;
+
+  @include for-desktop-up {
+    display: flex;
+    flex-direction: column;
+    flex: 0.33;
+    padding: 2rem 0.8rem;
+  }
 }
