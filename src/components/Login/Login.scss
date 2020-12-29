@@ -1,0 +1,47 @@
+@import "src/style/color";
+
+.login {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .login__logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .logo__img {
+      width: 200px;
+      height: 200px;
+
+      .facebook-svg-background {
+        fill: $main;
+      }
+      .facebook-svg-text {
+        fill: #fff;
+      }
+    }
+
+    .logo__text {
+      width: 250px;
+      height: 100px;
+      margin-bottom: 5rem;
+    }
+  }
+
+  button {
+    background-color: $main;
+    width: 200px;
+    transition: all 0.3s ease;
+    font-weight: 800;
+
+    &:hover {
+      background-color: $background-main;
+      color: $main;
+    }
+  }
+}

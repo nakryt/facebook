@@ -33,7 +33,7 @@ const Post: FC<Props> = ({
 
       {image && (
         <div className="post__image">
-          <img src={image} alt="image for post" />
+          <img src={image} alt="for post" />
         </div>
       )}
 

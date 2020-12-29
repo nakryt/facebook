@@ -3,6 +3,7 @@ import "./Body.scss";
 
 import { Sidebar } from "../Sidebar/Sidebar";
 import Feed from "../Feed/Feed";
+// import Widgets from "../Widgets/Widgets";
 
 export const Body = () => {
   return (
@@ -15,6 +16,7 @@ export const Body = () => {
         }}
       />
       <Feed />
+      {/*<Widgets />*/}
     </div>
   );
 };
