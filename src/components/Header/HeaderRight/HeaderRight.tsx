@@ -8,13 +8,17 @@ import {
   NotificationsActive as NotificationsActiveIcon,
   ExpandMore as ExpandMoreIcon,
 } from "@material-ui/icons";
+import { useStateValue } from "../../../context/StateProvider";
 
 export const HeaderRight = () => {
+  const {
+    state: { user },
+  } = useStateValue();
   return (
     <div className="headerRight">
       <div className="headerRight__info">
-        <Avatar />
-        <h4>Volodymyr Pestov</h4>
+        <Avatar src={user?.photoURL ? user?.photoURL : undefined} />
+        {user?.displayName && <h4>{user.displayName}</h4>}
       </div>
 
       <div className="headerRight__options">

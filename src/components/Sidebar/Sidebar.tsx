@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React from "react";
 import "./Sidebar.scss";
 
 import {
@@ -12,15 +12,18 @@ import {
 } from "@material-ui/icons";
 
 import SidebarRow from "./SidebarRow/SidebarRow";
+import { useStateValue } from "../../context/StateProvider";
 
-interface Props {
-  user: any;
-}
-
-export const Sidebar: FC<Props> = ({ user }) => {
+export const Sidebar = () => {
+  const {
+    state: { user },
+  } = useStateValue();
   return (
     <div className="sidebar">
-      <SidebarRow src={user.photoURL} title={user.displayName} />
+      <SidebarRow
+        src={user?.photoURL ? user?.photoURL : undefined}
+        title={user?.displayName ? user?.displayName : "Guest"}
+      />
       <SidebarRow title="CORVID-19 Information Center" Icon={LocalHospital} />
       <SidebarRow title="Pages" Icon={EmojiFlags} />
       <SidebarRow title="Friends" Icon={People} />
