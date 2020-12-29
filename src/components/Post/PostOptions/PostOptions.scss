@@ -1,0 +1,28 @@
+@import "src/style/color";
+
+.post__options {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1rem 1rem 0 1rem;
+  border-top: 1px solid lightgray;
+  font-size: medium;
+  color: gray;
+  cursor: pointer;
+
+  .post__option {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    padding: 0.3rem;
+
+    p {
+      margin-left: 0.8rem;
+    }
+
+    &:hover {
+      background-color: $background-light;
+      border-radius: 0.8rem;
+    }
+  }
+}
