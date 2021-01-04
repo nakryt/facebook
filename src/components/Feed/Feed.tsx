@@ -1,28 +1,45 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Feed.scss";
+
+import firebase from "firebase";
 import StoryReel from "../StoryReel/StoryReel";
 import MessageSender from "../MessageSender/MessageSender";
 import Post from "../Post/Post";
+import db from "../../firebase";
 
 const Feed = () => {
+  const [posts, setPosts] = useState<firebase.firestore.DocumentData[]>([]);
+
+  useEffect(() => {
+    const unsubscribe = db
+      .collection("posts")
+      .orderBy("timestamp", "desc")
+      .onSnapshot((snapshot) => {
+        setPosts(
+          snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() }))
+        );
+      });
+
+    return () => {
+      unsubscribe();
+    };
+  }, []);
+
   return (
     <div className="feed">
       <StoryReel />
       <MessageSender />
-      <Post
-        profilePic="https://static-s.aa-cdn.net/img/ios/1257058542/e25ee4c509249d261d2943bfd493f016?v=1"
-        image="https://www.technocrazed.com/wp-content/uploads/2015/12/beautiful-wallpaper_279.jpg"
-        username="Volodymyr Pestov"
-        timestamp="timestamp"
-        message="This is a message for the post"
-      />
 
-      <Post
-        profilePic="https://static-s.aa-cdn.net/img/ios/1257058542/e25ee4c509249d261d2943bfd493f016?v=1"
-        username="Volodymyr Pestov"
-        timestamp="timestamp"
-        message="This is a message for the post"
-      />
+      {posts.map((post) => (
+        <Post
+          key={post.id}
+          message={post.data.message}
+          profilePic={post.data.profilePic}
+          timestamp={post.data.timestamp}
+          username={post.data.username}
+          image={post.data.image}
+        />
+      ))}
     </div>
   );
 };

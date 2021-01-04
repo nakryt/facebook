@@ -6,7 +6,7 @@ import PostOptions from "./PostOptions/PostOptions";
 interface Props {
   profilePic: string;
   username: string;
-  timestamp: string;
+  timestamp: { seconds: number };
   message: string;
   image?: string;
 }
@@ -24,7 +24,10 @@ const Post: FC<Props> = ({
         <Avatar src={profilePic} className="post__avatar" />
         <div className="post__topInfo">
           <h4>{username}</h4>
-          <p>{timestamp}</p>
+          <p>
+            {timestamp &&
+              new Date(timestamp.seconds * 1000).toLocaleString("ru")}
+          </p>
         </div>
       </div>
       <div className="post__text">

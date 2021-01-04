@@ -13,7 +13,7 @@ const StoryReel = () => {
       />
       <Story
         image="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTBHC2s4NFdzXEsVzvBPGjkrSePQa-8XFuNtQ&usqp=CAU"
-        profileSrc="https://avatars2.githubusercontent.com/u/24712956?s=400&u=b71527e605ae1b748fe2d4157a842e57e427ad44&v=4"
+        profileSrc="https://www.filepicker.io/api/file/9GCYH9YQnyqu4Ymwmzu9"
         title="Rafeh Qazi"
       />
       <Story
